@@ -1,0 +1,264 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+.z-i1
+	z-index: 1
+	position: relative
+.case
+	color: $main
+	position: relative
+	text-align: center
+	margin: 0 auto
+	margin-top: 100px
+	z-index: 1
+	&__title
+		font-size: 48px
+		margin-bottom: 0px
+		line-height: 1
+		text-transform: uppercase
+	&__intro
+		font-size: 36px
+		color: $accent
+		line-height: 1
+		text-transform: uppercase
+	&__text
+		font-size: 16px
+		max-width: 680px
+		margin: 0 auto
+	&__before
+		font-family: $second-font
+		font-size: 360px
+		text-transform: uppercase
+		font-weight: 700
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		color: $accent
+		opacity: .1
+		line-height: 1
+		z-index: -1
+		&_s
+			font-size: 276px
+	&-review 
+		background: url(../img/case/abstract-case_bg.jpg) no-repeat
+		background-size: cover
+		img
+			width: 100%
+	&-logo
+		width: 100%
+		&_front
+			max-width: 400px
+			+media-breakpoint-down(md)
+				width: 60%
+		&_horizontal
+			max-width: 700px
+	&__line
+		width: 2px
+		height: 50px
+		background: #fff
+		margin: 30px auto
+	&-img
+		position: relative
+		z-index: 10
+		margin: 0 auto
+		height: auto
+		width: 100%
+		max-width: 910px
+		height: auto
+		margin: 0 auto
+		font-weight: 700
+		margin-bottom: -50px
+		&_hover
+			position: relative
+			transition: 1.5s all ease-in-out
+			transform-style: preserve-3d
+			width: 100%
+			max-width: 910px
+			&:hover
+				transform: rotateY(180deg)
+		&_double
+			max-width: 688px
+			width: 100%
+			height: 487px
+		&_website
+			max-width: 1100px
+		&__front
+			position: absolute
+			left: 0
+			top: 0
+			backface-visibility: hidden
+			transform-style: preserve-3d
+		&__back
+			position: absolute
+			transform: rotateY(180deg)	
+			left: 0
+			top: 0	
+			backface-visibility: hidden
+			transform-style: preserve-3d
+		&__img
+			display: block
+			height: auto
+			width: 100%
+			&_hover
+				position: relative
+				transition: 1.5s all ease-in-out
+				width: 100%
+				max-width: 910px
+				&:hover
+					transform: rotateY(180deg)
+	@media only screen and (max-width : 1360px) 
+		margin-top: 70px
+	+media-breakpoint-down(md)
+		&__before
+			font-size: 240px
+			&_s
+				font-size: 218px
+	+media-breakpoint-down(sm)
+		margin-top: 40px
+		&-img
+			margin: 0 10px
+			&_double
+				margin: 0 auto
+				max-width: 355px
+				height: 250px
+		&__title
+			font-size: 30px
+		&__intro
+			font-size: 22px
+		&__text
+			font-size: 14px
+		&__line
+			margin: 15px auto
+			height: 35px
+		&__before
+			display: none
+
+.logo
+	background: url(../img/case/particular.png) no-repeat
+	background-size: cover
+
+.task
+	font-weight: 500
+	font-size: 14px
+	margin: 17px 24px 17px 15px
+	position: relative
+	&__bg
+		background: url(../img/case/abstract_bg.jpg) no-repeat
+		background-size: cover
+		padding: 25px 50px 80px 50px
+		overflow: hidden
+		position: relative
+		&-before
+			position: absolute
+			width: 93%
+			height: 1px
+			bottom: 54px
+			left: 50px
+			background: $accent
+		&-after
+			position: absolute
+			width: 1px
+			height: 65%
+			right: 50px
+			bottom: 30px
+			background: $accent
+	&__text
+		font-size: 18px
+	&__circle
+		width: 22px
+		height: 22px
+		border: 1px solid $accent
+		border-radius: 50%
+		display: inline-block
+		text-align: center
+		line-height: 20px
+		font-size: 16px
+		margin-top: 9px
+		margin-right: 10px
+	&__before
+		position: absolute
+		width: 25%
+		height: 90%
+		background: rgba(0,0,0,.7)
+		top: -17px
+		left: -15px
+		z-index: -2
+	&__after
+		position: absolute
+		width: 70%
+		height: 90%
+		background: $dark
+		bottom: -17px
+		right: -24px
+		z-index: -2
+	+media-breakpoint-down(sm)
+		margin: 7px 4px 7px 5px
+		&__bg
+			padding: 15px 30px 50px 30px
+			&-before
+				width: 90%
+				bottom: 34px
+				left: 30px
+			&-after
+				height: 75%
+				right: 30px
+				bottom: 20px
+		&__after
+			right: -15px 
+
+.title
+	text-align: center
+	font-size: 30px
+	font-weight: 700
+
+.case-preview__img
+	display: block
+	width: 100%
+	height: auto
+	margin: 0 auto
+	+media-breakpoint-down(sm)
+	margin-top: 50px
+
+.case-nav
+	text-align: center
+	&-oder
+		margin: 20px 0
+		display: inline-block
+		transition: all .5s
+		&__line
+			width: 33%
+			height: 2px
+			background: $accent
+			display: block
+			transition: all .5s
+		&__text
+			color: $dark
+			font-size: 30px
+			font-weight: 700
+			transition: all .5s
+			&:hover
+				color: $accent
+		&:hover
+			.case-nav-oder__line
+				width: 100%
+
+	&__prev
+		color: $dark
+		font-size: 18px
+		font-weight: 500
+		&:hover
+			color: $accent
+	&__next
+		color: $dark
+		font-size: 18px
+		font-weight: 500
+		&:hover
+			color: $accent
+	&__line
+		height: 16px
+		width: 1px
+		background: $accent
+		display: inline-block
+		margin: 0 10px
+	
